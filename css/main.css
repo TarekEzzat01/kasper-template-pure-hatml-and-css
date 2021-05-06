@@ -233,10 +233,15 @@ ul {list-style: none;}
 @media (max-width:767px) {
     .landing .text {
         width: 100%;
+        margin-top: 60px;
     }
 
     .landing .text .content {
         max-width: 100%;
+    }
+
+    .landing .bullets {
+        bottom: 3px !important;
     }
 }
 
@@ -442,3 +447,94 @@ ul {list-style: none;}
     }
 }
 /* end design  */
+
+/* portfolio */ 
+
+.portfolio {
+    padding-top: var(--sec-padding);
+    padding-bottom: var(--sec-padding);
+    text-transform: capitalize;
+}
+
+.shuffle {
+    display: flex;
+    justify-content: center;
+}
+
+.shuffle li {
+    padding: 12px;
+}
+
+.shuffle li.active {
+    background-color: var(--min-color);
+    color: white;
+}
+
+.portfolio-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.portfolio-content .box {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-content .box:hover .capthion {
+    bottom: 0;
+}
+
+.portfolio-content .box:hover img {
+    transform: rotate(3deg) scale(1.1);
+}
+
+@media (min-width:768px) {
+    .portfolio-content .box {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width:1199px) {
+    .portfolio-content .box {
+        flex-basis: 25%;
+    }
+} 
+
+
+.portfolio-content .box img {
+    max-width: 100%;
+    transition: 0.5s;
+}
+
+.portfolio-content .box .capthion {
+    position: absolute;
+    text-transform: capitalize;
+    left: 0;
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+    bottom: -100%;
+}
+
+.portfolio-content .box .capthion h4 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.portfolio-content .box .capthion p {
+    color: var(--min-color);
+}
+
+.more {
+    background-color: var(--min-color);
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+/* end portfolio*/ 
