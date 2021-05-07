@@ -686,12 +686,201 @@ ul {list-style: none;}
 
 /*start skills */
 
-/* .skills {
+.skills {
     padding-top: var(--sec-padding);
     padding-bottom: var(--sec-padding);
 }
 
 .skills .containar {
-} */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media (min-width:992px) {
+
+    .skills .containar > div {
+        flex-basis: 45%;
+    }
+}
+
+.skills .containar > div > h3 {
+    margin-bottom: 30px;
+    font-weight: normal;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.skills .containar > div > p {
+
+    color: #777;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.testmonial .content {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.testmonial .content img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 50px;
+
+}
+
+@media (max-width:767px) {
+
+    .testmonial .content {
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .testmonial .content img {
+margin: 0 auto 20px;
+    }
+}
+
+.testmonial .text {
+    line-height: 1.7;
+    border-bottom: 1px solid #ccc;
+}
+
+.testmonial .text p  {
+    margin-bottom: 20px;
+    color: #777;
+    text-align: right;
+    font-size: 14px;
+
+}
+
+.testmonial .bullets {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.testmonial .bullets li {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.testmonial .bullets li.active {
+    background-color: var(--min-color);
+    border-color: var(--min-color);
+}
+
+.our-skills .progress {
+    margin-bottom: 50px;
+}
+
+.our-skills .progress  h4 {
+    margin-bottom: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+.our-skills .progress .prog {
+    background-color: #dedacd69;
+    height: 30px;
+}
+
+.our-skills .progress .prog  span {
+    display: block;
+    background-color: var(--min-color);
+    height: 100%;
+    position: relative;
+}
+
+.our-skills .progress .prog  span::before {
+    content: attr(data-progress);
+    position: absolute;
+    background-color: #00bcd4;
+    color: white;
+    top: -40px;
+    right: -18px;
+    padding: 5px 0;
+    width: 40px;
+    text-align: center;
+
+
+}
+
+.our-skills .progress .prog  span::after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 8px;
+    border-color:   #00bcd4 transparent transparent ;
+    right: -8px;
+    top: -15px;
+}
 
 /* end skills */
+
+/* start quoto */
+    .quote {
+        padding-top: var(--sec-padding);
+        padding-bottom: var(--sec-padding);
+        background-image: url(../image/11.jpg);
+        background-size: cover;
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+
+    .quote::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0 0 0 / 50%);
+    }
+
+    .quote .containar {
+        position: relative;
+    }
+
+    .quote q {
+        font-size: 30px;
+        margin-bottom: 30px;
+        display: block;
+    }
+    q::before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f10e";
+        font-weight: 900;
+        font-size: 25px;
+        position: relative;
+        top: -17px;
+        left: -15px;
+    }
+
+    q::after {
+        font-family: "Font Awesome 5 Free";
+        content: "\f10e";
+        font-weight: 900;
+        font-size: 21px;
+        position: relative;
+        top: 10px;
+        left: 3px;
+    }
+    
+    @media (max-width:767px) {
+        q::before{
+            left: -2px !important;
+        }
+    }
+
+/* end quote*/
